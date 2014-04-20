@@ -17,14 +17,22 @@ Or install it yourself as:
     $ gem install postmon_ruby
 
 ## Usage
-
+####Consultar CEP:
 ```ruby
 require 'postmon_ruby'
-resultado = PostmonRuby::Client.search "01330000"
+resultado = PostmonRuby::Client.search :cep, "01330000"
 puts resultado.logradouro
 puts resultado.bairro
 puts resultado.cidade
 puts resultado.estado
+```
+
+####Consultar informações de uma cidade:
+```ruby
+require 'postmon_ruby'
+resultado = PostmonRuby::Client.search :cidade, "SP", "Araraquara"
+puts resultado.area_km2
+puts resultado.codigo_ibge
 ```
 
 ## Contributing
