@@ -27,6 +27,16 @@ module PostmonRuby
           end          
         end
 
+        context "with invalid city" do
+          let(:city) { PostmonRuby::Client.search(:cidade, "SP", "Xxxx") }
+          it "returns a PostmonRuby::City object" do
+            expect(city).to be_a(PostmonRuby::City)
+          end
+          it "returns true in 'not_found'" do
+            expect(city.not_found).to be_true
+          end          
+        end        
+
       end
     end  
   end
