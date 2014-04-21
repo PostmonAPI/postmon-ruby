@@ -11,7 +11,7 @@ module PostmonRuby
 
       def search(*arguments)
         arguments.flatten!
-        PostmonRuby::Address.new( HTTParty.get("#{ENDPOINT}/#{self.endpoint}/#{arguments.join("/")}") )
+        PostmonRuby::Address.new( HTTParty.get(self.arguments_uri(arguments)) )
       end
     end
   end

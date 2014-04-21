@@ -15,6 +15,10 @@ module PostmonRuby
         raise ArgumentError.new("wrong number of arguments (#{arguments.size} for #{finder.arguments_size})") if finder.arguments_size != arguments.size
         finder.search(arguments)
       end
+
+      def arguments_uri(arguments)
+        URI::encode("#{ENDPOINT}/#{self.endpoint}/#{arguments.join("/")}")
+      end
     end
   end
 end
