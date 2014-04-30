@@ -35,6 +35,15 @@ puts resultado.area_km2
 puts resultado.codigo_ibge
 ```
 
+####Consultar informações de um estado:
+```ruby
+require 'postmon_ruby'
+resultado = PostmonRuby::Client.search :estado, "SP"
+puts resultado.area_km2
+puts resultado.codigo_ibge
+puts resultado.nome
+```
+
 ## Contributing
 
 1. Fork it

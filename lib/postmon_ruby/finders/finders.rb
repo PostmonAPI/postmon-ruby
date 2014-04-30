@@ -3,7 +3,8 @@ module PostmonRuby
     class Finders
       @finders = { 
         cep:    PostmonRuby::Finders::CepFinder.new,
-        cidade: PostmonRuby::Finders::CityFinder.new
+        cidade: PostmonRuby::Finders::CityFinder.new,
+        estado: PostmonRuby::Finders::StateFinder.new,
       }
 
       def self.get_finder(finder)
