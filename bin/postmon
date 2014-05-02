@@ -7,15 +7,15 @@ options = {}
 
 OptionParser.new do |opts|
   opts.banner = "Usage postmon [options]"
-  opts.on("--cep CEP", String, "Pesquisa pelo CEP") do |cep|
+  opts.on("--cep CEP", String, "Consultar CEP") do |cep|
     options[:cep] = cep
   end
 
-  opts.on("--cidade UF,Cidade", Array, "Pesquisa pelo UF e Cidade") do |uf_cidade|
+  opts.on("--cidade UF,Cidade", Array, "Consultar informações de uma cidade") do |uf_cidade|
     options[:cidade] = uf_cidade
   end
 
-  opts.on("--estado UF", String, "Pesquisa pelo Estado") do |uf|
+  opts.on("--estado UF", String, "Consultar informações de um estado") do |uf|
     options[:estado] = uf
   end
 end.parse!
