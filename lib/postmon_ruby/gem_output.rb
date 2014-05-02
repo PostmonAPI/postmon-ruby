@@ -31,8 +31,7 @@ module PostmonRuby
     end
 
     def self.output_variables(resultado)
-
-      if resultado.not_found == true
+      if resultado.not_found
         puts "Nenhum resultado encontrado."
       else
         info = {}
