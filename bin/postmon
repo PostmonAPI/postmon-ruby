@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require './lib/postmon_ruby'
+
+options = {}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage postmon [options]"
+  opts.on("--cep CEP", String, "Pesquisa pelo CEP") do |cep|
+    options[:cep] = cep
+  end
+
+  opts.on("--cidade UF,Cidade", Array, "Pesquisa pelo UF e Cidade") do |uf_cidade|
+    options[:cidade] = uf_cidade
+  end
+
+  opts.on("--estado UF", String, "Pesquisa pelo Estado") do |uf|
+    options[:estado] = uf
+  end
+end.parse!
+
+unless options[:cep].nil?
+  PostmonRuby::GemOutput.cep(options[:cep])
+end
+
+unless options[:cidade].nil?
+  PostmonRuby::GemOutput.cidade(options[:cidade].first, options[:cidade].last)
+end
+
+unless options[:estado].nil?
+  PostmonRuby::GemOutput.estado(options[:estado])
+end
