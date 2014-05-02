@@ -20,14 +20,4 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-unless options[:cep].nil?
-  PostmonRuby::GemOutput.cep(options[:cep])
-end
-
-unless options[:cidade].nil?
-  PostmonRuby::GemOutput.cidade(options[:cidade].first, options[:cidade].last)
-end
-
-unless options[:estado].nil?
-  PostmonRuby::GemOutput.estado(options[:estado])
-end
+PostmonRuby::GemOutput.get_info(options)

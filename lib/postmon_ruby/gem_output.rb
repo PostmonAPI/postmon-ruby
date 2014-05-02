@@ -1,5 +1,20 @@
 module PostmonRuby
   class GemOutput
+    def self.get_info(options)
+      unless options[:cep].nil?
+        cep(options[:cep])
+      end
+
+      unless options[:cidade].nil?
+        cidade(options[:cidade].first, options[:cidade].last)
+      end
+
+      unless options[:estado].nil?
+        estado(options[:estado])
+      end
+    end
+
+    private
     def self.cep(cep)
       resultado = Client.search :cep, cep
       output_variables(resultado)
@@ -15,16 +30,20 @@ module PostmonRuby
       output_variables(resultado)
     end
 
-    private
     def self.output_variables(resultado)
-      info = {}
 
-      resultado.instance_variables.each do |var|
-        info[var.to_s.delete("@").capitalize] = resultado.instance_variable_get(var)
-      end
+      if resultado.not_found == true
+        puts "Nenhum resultado encontrado."
+      else
+        info = {}
 
-      info.each do |k, v|
-        puts "#{k}: #{v}"
+        resultado.instance_variables.each do |var|
+          info[var.to_s.delete("@").capitalize] = resultado.instance_variable_get(var)
+        end
+
+        info.each do |k, v|
+          puts "#{k}: #{v}"
+        end
       end
     end
   end
