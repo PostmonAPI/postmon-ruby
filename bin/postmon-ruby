@@ -2,7 +2,7 @@
 #encoding: UTF-8
 
 require 'optparse'
-require './lib/postmon_ruby'
+require 'postmon_ruby'
 
 options = {}
 
