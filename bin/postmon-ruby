@@ -18,6 +18,10 @@ OptionParser.new do |opts|
   opts.on("--estado UF", String, "Consultar informações de um estado") do |uf|
     options[:estado] = uf
   end
+
+  opts.on("--rastreio CODIGO_POSTAGEM", String, "Consultar informações de rastreio de um pacote") do |rastreio|
+    options[:rastreio] = rastreio
+  end  
 end.parse!
 
 PostmonRuby::GemOutput.get_info(options)
