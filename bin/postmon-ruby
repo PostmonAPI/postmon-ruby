@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require './lib/postmon_ruby'
+
+options = {}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage postmon [options]"
+  opts.on("--cep CEP", String, "Consultar CEP") do |cep|
+    options[:cep] = cep
+  end
+
+  opts.on("--cidade UF,Cidade", Array, "Consultar informações de uma cidade") do |uf_cidade|
+    options[:cidade] = uf_cidade
+  end
+
+  opts.on("--estado UF", String, "Consultar informações de um estado") do |uf|
+    options[:estado] = uf
+  end
+end.parse!
+
+PostmonRuby::GemOutput.get_info(options)

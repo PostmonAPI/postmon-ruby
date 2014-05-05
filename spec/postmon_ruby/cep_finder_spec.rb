@@ -47,6 +47,6 @@ module PostmonRuby
         end
 
       end
-    end  
+    end
   end
 end
