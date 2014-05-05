@@ -7,7 +7,7 @@ module PostmonRuby
     def initialize(options={})
       @not_found = true if options.nil?
       @@address_attributes.each do |attribute|
-        send(:"#{attribute}=", options[attribute.to_s] || "") 
+        send(:"#{attribute}=", options[attribute.to_s] || "")
       end
     end
 
