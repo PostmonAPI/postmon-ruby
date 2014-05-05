@@ -44,6 +44,54 @@ puts resultado.codigo_ibge
 puts resultado.nome
 ```
 
+###Para consultar pelo terminal
+#### Consultar pelo CEP:
+
+    $ postmon-ruby --cep 49015040
+
+    Complemento: lado ímpar
+    Bairro: São José
+    Cidade: Aracaju
+    Logradouro: Avenida Barão de Maruim
+    Estado: SE
+    Cep: 49015040
+
+#### Consultar informações de uma cidade:
+
+    $ postmon-ruby --cidade SE,Aracaju
+
+    Area_km2: 181,857
+    Codigo_ibge: 2800308
+
+#### Consultar informações de um estado:
+
+    $ postmon-ruby --estado SE
+
+    Area_km2: 21.915,116
+    Codigo_ibge: 28
+    Nome: Sergipe
+    
+#### Consultar informações de rastreio de um pacote:
+    
+    $ postmon-ruby --rastreio RF223325059SG
+    
+    Codigo: RF223325059SG
+    Servico: ect
+	detalhes: Em trвnsito para UNIDADE DE TRATAMENTO INTERNACIONAL - BRASIL
+	local: CINGAPURA
+	data: 11/04/2014 14:04
+	situacao: Encaminhado
+
+#### Menu de opções:
+
+    $ postmon-ruby -h
+
+    Usage postmon [options]
+        --cep CEP                    Consultar CEP
+        --cidade UF,Cidade           Consultar informações de uma cidade
+        --estado UF                  Consultar informações de um estado
+        --rastreio CODIGO_POSTAGEM   Consultar informações de rastreio de um pacote
+
 ## Contributing
 
 1. Fork it
