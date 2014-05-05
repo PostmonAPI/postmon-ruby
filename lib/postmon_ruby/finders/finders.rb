@@ -5,6 +5,7 @@ module PostmonRuby
         cep:    PostmonRuby::Finders::CepFinder.new,
         cidade: PostmonRuby::Finders::CityFinder.new,
         estado: PostmonRuby::Finders::StateFinder.new,
+        rastreio: PostmonRuby::Finders::TrackerFinder.new
       }
 
       def self.get_finder(finder)
