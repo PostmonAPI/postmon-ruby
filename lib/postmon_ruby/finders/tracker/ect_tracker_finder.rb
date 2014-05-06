@@ -12,7 +12,7 @@ module PostmonRuby
 
         def search(*arguments)
           arguments.flatten!
-          PostmonRuby::Track.new( HTTParty.get(self.arguments_uri(arguments)) )
+          PostmonRuby::Track.new( PostmonRuby::Http.get(self.arguments_uri(arguments)) )
         end
       end
     end

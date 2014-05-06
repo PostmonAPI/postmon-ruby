@@ -11,7 +11,7 @@ module PostmonRuby
 
       def search(*arguments)
         arguments.flatten!
-        PostmonRuby::City.new( HTTParty.get(self.arguments_uri(arguments)) )
+        PostmonRuby::City.new( PostmonRuby::Http.get(self.arguments_uri(arguments)) )
       end
     end
   end
