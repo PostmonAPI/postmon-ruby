@@ -1,3 +1,4 @@
+require 'pry'
 module PostmonRuby
   class GemOutput
     def self.get_info(options)
@@ -56,7 +57,7 @@ module PostmonRuby
     def self.print_array_output(array, level = 0)
       array.each do |k, v|
         print "\t" if level > 0
-        if(v.kind_of?(Enumerable) || k.kind_of?(Enumerable))
+        if( (!v.kind_of?(String) && v.kind_of?(Enumerable) ) || ( !k.kind_of?(String) &&  k.kind_of?(Enumerable) ))
           print_array_output(v||k, 1)
         else
           puts "#{k}: #{v}"

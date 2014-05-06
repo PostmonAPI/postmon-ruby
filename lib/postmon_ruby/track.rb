@@ -7,7 +7,7 @@ module PostmonRuby
     attr_reader :historico
 
     def initialize(options={})
-      @not_found = true if options.nil?
+      @not_found = true if options.not_found?
       @@track_attributes.each do |attribute|
         send(:"#{attribute}=", options[attribute.to_s] || "") 
       end

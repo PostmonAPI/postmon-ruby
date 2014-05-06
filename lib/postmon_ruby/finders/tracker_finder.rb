@@ -2,7 +2,7 @@ module PostmonRuby
   module Finders
     class TrackerFinder < PostmonRuby::Finders::Finder
       @@trackers = {
-        ect: PostmonRuby::Finders::Tracker::ECTTrackerFinder.new
+        :ect => PostmonRuby::Finders::Tracker::ECTTrackerFinder.new
       }
       def arguments_size
         2

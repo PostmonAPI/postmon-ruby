@@ -17,7 +17,7 @@ module PostmonRuby
       end
 
       def arguments_uri(arguments)
-        URI::encode("#{ENDPOINT}/#{self.endpoint}/#{arguments.join("/")}")
+        URI(URI::encode("#{ENDPOINT}/#{self.endpoint}/#{arguments.join("/")}")) 
       end
     end
   end

@@ -1,4 +1,6 @@
 require "postmon_ruby/version"
+require "json" 
+require "postmon_ruby/http/http"
 require "postmon_ruby/client"
 require "postmon_ruby/city"
 require "postmon_ruby/state"
@@ -12,7 +14,8 @@ require "postmon_ruby/finders/state_finder"
 require "postmon_ruby/finders/tracker/ect_tracker_finder"
 require "postmon_ruby/finders/tracker_finder"
 require "postmon_ruby/finders/finders" 
-require "httparty"
+# require "httparty"
+require "net/http"
 
 module PostmonRuby
   ENDPOINT = "http://api.postmon.com.br/v1"
