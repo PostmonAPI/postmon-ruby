@@ -1,0 +1,42 @@
+{
+  codigo: "TESTE",
+  servico: "ect",
+  historico: [
+    {
+      detalhes: null,
+      local: "CEE VILA NOVA CACHOEIRINHA - SAO PAULO/SP",
+      data: "22/04/2014 17:51",
+      situacao: "Postado"
+    },
+    {
+      detalhes: "Em trвnsito para CTE VILA MARIA - SAO PAULO/SP",
+      local: "CEE VILA NOVA CACHOEIRINHA - SAO PAULO/SP",
+      data: "22/04/2014 20:15",
+      situacao: "Encaminhado"
+    },
+    {
+      detalhes: "Encaminhado para CTCE RIBEIRAO PRETO - RIBEIRAO PRETO/SP",
+      local: "CTE VILA MARIA - SAO PAULO/SP",
+      data: "23/04/2014 15:30",
+      situacao: "Encaminhado"
+    },
+    {
+      detalhes: "Em trвnsito para CEE ARARAQUARA - ARARAQUARA/SP",
+      local: "CTCE RIBEIRAO PRETO - RIBEIRAO PRETO/SP",
+      data: "24/04/2014 16:05",
+      situacao: "Encaminhado"
+    },
+    {
+      detalhes: null,
+      local: "ARARAQUARA/SP",
+      data: "25/04/2014 12:17",
+      situacao: "Saiu para entrega ao destinatбrio"
+    },
+    {
+      detalhes: null,
+      local: "CEE ARARAQUARA - ARARAQUARA/SP",
+      data: "25/04/2014 17:58",
+      situacao: "Entrega Efetuada"
+    }
+  ]
+}

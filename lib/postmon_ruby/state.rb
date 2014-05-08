@@ -1,3 +1,4 @@
+# encoding: utf-8
 module PostmonRuby
   class State
     @@state_attributes = [ :area_km2, :codigo_ibge, :nome ]

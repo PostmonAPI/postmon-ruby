@@ -1,3 +1,4 @@
+# encoding: utf-8
 module PostmonRuby
   class Address
     @@address_attributes = [ :complemento, :bairro, :cidade, :logradouro, :estado, :cep ]

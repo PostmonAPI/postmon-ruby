@@ -1,3 +1,4 @@
+# encoding: utf-8
 require "postmon_ruby/version"
 require "json" 
 require "postmon_ruby/http/http"

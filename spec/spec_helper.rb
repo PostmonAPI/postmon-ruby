@@ -1,3 +1,4 @@
+# encoding: utf-8
 require "postmon_ruby"
 require "webmock/rspec"
 include WebMock::API

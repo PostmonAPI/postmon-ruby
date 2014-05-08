@@ -1,3 +1,4 @@
+# encoding: utf-8
 module PostmonRuby
   class Http
     def self.get(uri)

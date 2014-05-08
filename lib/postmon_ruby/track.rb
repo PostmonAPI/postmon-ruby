@@ -1,3 +1,4 @@
+# encoding: utf-8
 module PostmonRuby
   class Track
     #TODO criar um model para salvar o historico do rastreio

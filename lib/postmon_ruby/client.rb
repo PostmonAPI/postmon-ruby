@@ -1,3 +1,4 @@
+# encoding: utf-8
 module PostmonRuby
   class Client
     def self.search(finder, *arguments)
