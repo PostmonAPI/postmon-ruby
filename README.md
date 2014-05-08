@@ -1,4 +1,4 @@
-# PostmonRuby
+# PostmonRuby [![Build Status](https://travis-ci.org/PostmonAPI/postmon_ruby.svg?branch=master)](https://travis-ci.org/PostmonAPI/postmon_ruby)
 
 postmon_ruby permite consultar cep's através da api do postmon
 
